@@ -32,13 +32,17 @@ namespace Part_3___Chapter_Problem
 
         private void btnResults_Click(object sender, EventArgs e)
         {
-            double dblHeight = System.Convert.ToDouble(height);
-            lblMessage.Text = ($"Hello {name}, you have {82 - age} years left until you die. You are {2.72 - dblHeight} m shorter than the tallest person in the world ");
+            double dblHeight;
+            double.TryParse(height, out dblHeight);
+            dblHeight = Math.Round(dblHeight, 2);
+            lblMessage.Text = ($"Hello {name}, you are {82 - age} years below life expectancy");
+            lblMessage2.Text = ($"and you're {2.72 - dblHeight} m shorter than the tallest person in the world ");
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             nudAge.Minimum = 0;
+            nudAge.Maximum = 82;
             age = Convert.ToInt32(nudAge.Value);
         }
     }

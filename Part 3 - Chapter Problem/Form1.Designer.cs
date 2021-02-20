@@ -37,6 +37,7 @@ namespace Part_3___Chapter_Problem
             this.btnResults = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.nudAge = new System.Windows.Forms.NumericUpDown();
+            this.lblMessage2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,27 +60,36 @@ namespace Part_3___Chapter_Problem
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(119, 16);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(63, 13);
+            this.lblName.Size = new System.Drawing.Size(73, 13);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Enter Name";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.ForeColor = System.Drawing.Color.White;
             this.lblAge.Location = new System.Drawing.Point(119, 42);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(54, 13);
+            this.lblAge.Size = new System.Drawing.Size(63, 13);
             this.lblAge.TabIndex = 4;
             this.lblAge.Text = "Enter Age";
             // 
             // lblHeight
             // 
             this.lblHeight.AutoSize = true;
+            this.lblHeight.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeight.ForeColor = System.Drawing.Color.White;
             this.lblHeight.Location = new System.Drawing.Point(119, 68);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(83, 13);
+            this.lblHeight.Size = new System.Drawing.Size(99, 13);
             this.lblHeight.TabIndex = 5;
             this.lblHeight.Text = "Enter Height (m)";
             // 
@@ -87,34 +97,52 @@ namespace Part_3___Chapter_Problem
             // 
             this.btnResults.Location = new System.Drawing.Point(13, 91);
             this.btnResults.Name = "btnResults";
-            this.btnResults.Size = new System.Drawing.Size(75, 23);
+            this.btnResults.Size = new System.Drawing.Size(205, 23);
             this.btnResults.TabIndex = 6;
-            this.btnResults.Text = "Results";
+            this.btnResults.Text = "Calculate";
             this.btnResults.UseVisualStyleBackColor = true;
             this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(193, 42);
+            this.lblMessage.BackColor = System.Drawing.Color.Black;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.White;
+            this.lblMessage.Location = new System.Drawing.Point(12, 160);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(42, 13);
+            this.lblMessage.Size = new System.Drawing.Size(49, 13);
             this.lblMessage.TabIndex = 7;
             this.lblMessage.Text = "Results";
             // 
             // nudAge
             // 
-            this.nudAge.Location = new System.Drawing.Point(12, 39);
+            this.nudAge.Location = new System.Drawing.Point(15, 39);
             this.nudAge.Name = "nudAge";
-            this.nudAge.Size = new System.Drawing.Size(101, 20);
+            this.nudAge.Size = new System.Drawing.Size(100, 20);
             this.nudAge.TabIndex = 8;
             this.nudAge.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // lblMessage2
+            // 
+            this.lblMessage2.AutoSize = true;
+            this.lblMessage2.BackColor = System.Drawing.Color.Black;
+            this.lblMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage2.ForeColor = System.Drawing.Color.White;
+            this.lblMessage2.Location = new System.Drawing.Point(12, 185);
+            this.lblMessage2.Name = "lblMessage2";
+            this.lblMessage2.Size = new System.Drawing.Size(49, 13);
+            this.lblMessage2.TabIndex = 9;
+            this.lblMessage2.Text = "Results";
             // 
             // BasicInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Part_3___Chapter_Problem.Properties.Resources.Me_As_Obama;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(392, 235);
+            this.Controls.Add(this.lblMessage2);
             this.Controls.Add(this.nudAge);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnResults);
@@ -141,6 +169,7 @@ namespace Part_3___Chapter_Problem
         private System.Windows.Forms.Button btnResults;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.NumericUpDown nudAge;
+        private System.Windows.Forms.Label lblMessage2;
     }
 }
 
