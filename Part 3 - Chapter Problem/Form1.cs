@@ -13,7 +13,7 @@ namespace Part_3___Chapter_Problem
     public partial class BasicInput : Form
     {
         string name;
-        string age;
+        int age;
         string height;
         public BasicInput()
         {
@@ -25,11 +25,6 @@ namespace Part_3___Chapter_Problem
             name = txtName.Text;
         }
 
-        private void txtAge_TextChanged(object sender, EventArgs e)
-        {
-            age = txtAge.Text;
-        }
-
         private void txtHeight_TextChanged(object sender, EventArgs e)
         {
             height = txtHeight.Text;
@@ -37,9 +32,14 @@ namespace Part_3___Chapter_Problem
 
         private void btnResults_Click(object sender, EventArgs e)
         {
-            int lifeExp = System.Convert.ToInt32(age);
             double dblHeight = System.Convert.ToDouble(height);
-            lblMessage.Text = ($"Hello {name}, you have {82 - lifeExp} years left until you die. You are {2.72 - dblHeight} m shorter than the tallest person in the world ");
+            lblMessage.Text = ($"Hello {name}, you have {82 - age} years left until you die. You are {2.72 - dblHeight} m shorter than the tallest person in the world ");
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            nudAge.Minimum = 0;
+            age = Convert.ToInt32(nudAge.Value);
         }
     }
 }
